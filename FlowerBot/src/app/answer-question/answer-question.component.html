@@ -1,0 +1,20 @@
+<h2>answer Question</h2>
+
+<form (submit)="answerQuestion()">
+  <label for="question">Question</label>
+  <div>
+    <input type="text" list="suggestions" id="question" name="question"
+      placeholder="I put a new forgies on the yep" [(ngModel)]="question"/>
+
+      <datalist id="suggestions">
+        <option>Are dophin a Fish?</option>
+        <option>Do you habe iq?</option>
+        <option>Is there a jan in jan?</option>
+      </datalist>
+
+    <button type="submit">Answer</button>
+    <button type="button" (click)="startOver()">Clear</button>
+  </div>
+</form>
+
+<markdown [data]="answer()"></markdown>
